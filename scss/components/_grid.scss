@@ -1,0 +1,56 @@
+//grid general
+
+// I am used to
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+//grid
+.container {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);//why is not working
+    grid-template-rows: auto;
+    height: 100vh;
+    gap: 3px;
+}
+ //flex all middle
+.bloque  {
+     display: inline-flex;
+     justify-content: center;
+     align-items: center;
+     position: relative;
+     width: 100%;
+     height: 100vh;
+     position: relative;
+ }
+
+ //sombra
+ .sombra {
+     position: relative;
+ }
+
+.sombra::before {
+    position: absolute;
+    content: " ";
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    z-index: 0;
+}
+.sombra:hover::before {
+    display: inline-flex;
+    cursor: pointer;
+    
+}
+
+
+.bloque * {
+    position: relative;
+}
+
+
+ 

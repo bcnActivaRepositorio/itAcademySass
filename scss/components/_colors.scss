@@ -1,0 +1,44 @@
+body {
+    background-color: whitesmoke;
+}
+
+.bloque:nth-child(1) {
+
+    background-color: #244f75;
+}
+.bloque:nth-child(2) {
+
+    background-color: #60BFBF;
+}
+.bloque:nth-child(3) {
+
+    background-color: #8C4B7E;
+}
+.bloque:nth-child(4) {
+
+    background-color: #F8BB44;
+}
+.bloque.bloque:nth-child(5) {
+
+    background-color: #F24B4B;
+}
+.bloque:nth-child(1)::before {
+
+    background-color: rgba(189, 204, 189, 0.5);
+}
+.bloque:nth-child(2)::before {
+
+    background-color:  rgba(189, 204, 189, 0.5);
+}
+.bloque:nth-child(3)::before {
+
+    background-color:  rgba(189, 204, 189, 0.5);
+}
+.bloque:nth-child(4)::before {
+
+    background-color:  rgba(189, 204, 189, 0.5);
+}
+.bloque.bloque:nth-child(5)::before {
+
+    background-color:  rgba(189, 204, 189, 0.5);
+}
