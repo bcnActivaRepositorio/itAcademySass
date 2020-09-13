@@ -1,4 +1,149 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
+.bloque:nth-child(1) {
+  align-self: flex-end;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  transform-origin: left; }
+
+.bloque:nth-child(2) {
+  align-self: flex-end;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  transform-origin: bottom; }
+
+.bloque:nth-child(3) {
+  align-self: flex-end;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  transform-origin: top; }
+
+.bloque:nth-child(4) {
+  align-self: flex-end;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  transform-origin: bottom; }
+
+.bloque:nth-child(5) {
+  align-self: flex-end;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  transform-origin: right; }
+
+.bloque.sombra.blanca:nth-child(1) {
+  animation-name: movBlockOne;
+  animation-timing-function: ease-out; }
+
+.bloque.sombra.blanca:nth-child(2) {
+  animation-name: movBlockTwo;
+  animation-timing-function: ease-out; }
+
+.bloque.sombra.blanca:nth-child(3) {
+  animation-name: movBlockThree;
+  animation-timing-function: ease-out; }
+
+.bloque.sombra.blanca:nth-child(4) {
+  animation-name: movBlockFour;
+  animation-timing-function: ease-out; }
+
+.bloque.sombra.blanca:nth-child(5) {
+  animation-name: movBlockFive;
+  animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1); }
+
+@keyframes movBlockOne {
+  0% {
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%); }
+  70% {
+    transform: translateX(-5%);
+    -webkit-transform: translateX(-5%);
+    -moz-transform: translateX(-5%);
+    -ms-transform: translateX(-5%);
+    -o-transform: translateX(-5%); }
+  100% {
+    transform: translateX(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0); } }
+@keyframes movBlockTwo {
+  0% {
+    transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%); }
+  70% {
+    transform: translateY(10%);
+    -webkit-transform: translateY(10%);
+    -moz-transform: translateY(10%);
+    -ms-transform: translateY(10%);
+    -o-transform: translateY(10%); }
+  100% {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0); } }
+@keyframes movBlockThree {
+  0% {
+    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%); }
+  70% {
+    transform: translateY(-10%);
+    -webkit-transform: translateY(-10%);
+    -moz-transform: translateY(-10%);
+    -ms-transform: translateY(-10%);
+    -o-transform: translateY(-10%); }
+  100% {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0); } }
+@keyframes movBlockFour {
+  0% {
+    transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%); }
+  70% {
+    transform: translateY(10%);
+    -webkit-transform: translateY(10%);
+    -moz-transform: translateY(10%);
+    -ms-transform: translateY(10%);
+    -o-transform: translateY(10%); }
+  100% {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0); } }
+@keyframes movBlockFive {
+  0% {
+    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%); }
+  70% {
+    transform: translateX(5%);
+    -webkit-transform: translateX(5%);
+    -moz-transform: translateX(5%);
+    -ms-transform: translateX(5%);
+    -o-transform: translateX(5%); }
+  100% {
+    transform: translateX(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0); } }
 body {
   background-color: whitesmoke; }
 
@@ -42,7 +187,8 @@ body {
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: auto;
   height: 100vh;
-  gap: 3px; }
+  gap: 3px;
+  overflow: hidden; }
 
 .bloque {
   display: inline-flex;
@@ -73,9 +219,61 @@ body {
 .bloque * {
   position: relative; }
 
+/* .box {
+    width:100%;
+    height:100vh;
+    
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: top;
+    background-color: #F24B4B;
+    position: relative;
+  }
+  
+  .overlay {
+    position: relative;
+  }
+  
+  .overlay:before{
+    position: absolute;
+    content:" ";
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display: none;
+    z-index:0;
+  }
+  
+  .overlay:hover:before{
+    display: block;
+    cursor: pointer;
+  }
+  
+  .red:before {
+    background-color: rgba(255,0,0,0.5);
+  }
+  
+  .blue:before {
+    background-color: rgba(0,0,255,0.5);
+  }
+  
+  .green:before{
+    background-color: rgba(0,255,0,0.5);
+  }
+  
+  .orange:before {
+    background-color: rgba(255,153,0, 0.5);
+  } */
+/*  .box * {
+     position: relative;
+    /*hack*/
+/* } */
 * {
   font-family: 'Lato', Verdana, Geneva, Tahoma, sans-serif;
-  color: white; }
+  color: white;
+  text-rendering: geometricPrecision; }
 
 h1 {
   text-transform: uppercase;
@@ -89,7 +287,7 @@ h1 {
     font-size: 225%; } }
 @media all and (max-width: 600px) {
   h1 {
-    font-size: 200%; } }
+    font-size: 175%; } }
 @media all and (max-width: 450px) {
   h1 {
     font-size: 150%; } }
