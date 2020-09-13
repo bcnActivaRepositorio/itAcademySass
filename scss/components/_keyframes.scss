@@ -64,13 +64,17 @@
 .bloque.sombra.blanca:nth-child(5) {
 
     animation-name: movBlockFive;
-    animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+    animation-timing-function: ease-out;
 }
 
 
 @keyframes movBlockOne {
 
-    0% { transform:translateX(-100%); -webkit-transform:translateX(-100%); -moz-transform:translateX(-100%); -ms-transform:translateX(-100%); -o-transform:translateX(-100%);
+    0% { transform:translateX(-100%) ; 
+        -webkit-transform:translateX(-100%) ; 
+        -moz-transform:translateX(-100%) ; 
+        -ms-transform:translateX(-100%) ; 
+        -o-transform:translateX(-100%) ;
 }
     70% {
         transform: translateX(-5%) ;
@@ -114,7 +118,11 @@
 
 @keyframes movBlockThree {
 
-    0% { transform:translateY(-100%); -webkit-transform:translateY(-100%); -moz-transform:translateY(-100%); -ms-transform:translateY(-100%); -o-transform:translateY(-100%);
+    0% { transform:translateY(-100%) ; 
+        -webkit-transform:translateY(-100%) ; 
+        -moz-transform:translateY(-100%) ; 
+        -ms-transform:translateY(-100%) ; 
+        -o-transform:translateY(-100%) ;
 }
     70% {
         transform: translateY(-10%) ;
@@ -158,7 +166,11 @@
 
 @keyframes movBlockFive {
 
-    0% { transform:translateX(100%); -webkit-transform:translateX(100%); -moz-transform:translateX(100%); -ms-transform:translateX(100%); -o-transform:translateX(100%);
+    0% { transform:translateX(100%); 
+        -webkit-transform:translateX(100%); 
+        -moz-transform:translateX(100%); 
+        -ms-transform:translateX(100%); 
+        -o-transform:translateX(100%);
 }
     70% {
         transform: translateX(5%) ;
