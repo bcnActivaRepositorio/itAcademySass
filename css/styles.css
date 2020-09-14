@@ -163,7 +163,7 @@ body {
   background-color: #F24B4B; }
 
 .bloque::before {
-  background-color: rgba(189, 204, 189, 0.1); }
+  background-color: rgba(189, 204, 189, 0.2); }
 
 body {
   box-sizing: border-box;
