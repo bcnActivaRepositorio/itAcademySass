@@ -24,13 +24,13 @@ body {
      position: relative;
      width: 100%;
      height: 100vh;
-     position: relative;
+     overflow: hidden;
+     //en este overflow radicaba el espacio you fool!!!!
+     animation-timing-function: ease-out;
+     animation-duration: 1.5s;
  }
 
  //sombra
- .sombra {
-     position: relative;
- }
 
 .sombra::before {
     position: absolute;
@@ -39,19 +39,26 @@ body {
     left:0;
     width: 100%;
     height: 100vh;
-    display: none;
-    z-index: 0;
+    z-index: 1;
+    transform-origin: center center ;
+    transform:skew(20deg);
+    -webkit-transform:skew(20deg);
+    -moz-transform:skew(20deg);
+    -ms-transform:skew(20deg);
+    -o-transform:skew(20deg);
+    -webkit-transform: skew(20deg);
 }
 .sombra:hover::before {
-    display: inline-flex;
+    //display: inline-flex;
     cursor: pointer;
-    
+    transform: scaleX(2);
+    -webkit-transform: scaleX(2);
+    -moz-transform: scaleX(2);
+    -ms-transform: scaleX(2);
+    -o-transform: scaleX(2);
 }
 
 
-.bloque * {
-    position: relative;
-}
 
 
  

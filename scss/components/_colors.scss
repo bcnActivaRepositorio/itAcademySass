@@ -22,23 +22,8 @@ body {
 
     background-color: #F24B4B;
 }
-.bloque:nth-child(1)::before {
+.bloque::before {
 
-    background-color: rgba(189, 204, 189, 0.5);
+    background-color: rgba(189, 204, 189, 0.1);
 }
-.bloque:nth-child(2)::before {
 
-    background-color:  rgba(189, 204, 189, 0.5);
-}
-.bloque:nth-child(3)::before {
-
-    background-color:  rgba(189, 204, 189, 0.5);
-}
-.bloque:nth-child(4)::before {
-
-    background-color:  rgba(189, 204, 189, 0.5);
-}
-.bloque.bloque:nth-child(5)::before {
-
-    background-color:  rgba(189, 204, 189, 0.5);
-}
