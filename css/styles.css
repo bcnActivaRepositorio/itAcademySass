@@ -42,7 +42,7 @@
   animation-timing-function: ease-out; }
 
 .bloque.sombra.blanca:nth-child(4) {
-  animation-name: movBlockFour;
+  animation-name: movBlockTwo;
   animation-timing-function: ease-out; }
 
 .bloque.sombra.blanca:nth-child(5) {
@@ -106,25 +106,6 @@
     -moz-transform: translateY(0);
     -ms-transform: translateY(0);
     -o-transform: translateY(0); } }
-@keyframes movBlockFour {
-  0% {
-    transform: translateY(100%);
-    -webkit-transform: translateY(100%);
-    -moz-transform: translateY(100%);
-    -ms-transform: translateY(100%);
-    -o-transform: translateY(100%); }
-  70% {
-    transform: translateY(10%);
-    -webkit-transform: translateY(10%);
-    -moz-transform: translateY(10%);
-    -ms-transform: translateY(10%);
-    -o-transform: translateY(10%); }
-  100% {
-    transform: translateY(0);
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -o-transform: translateY(0); } }
 @keyframes movBlockFive {
   0% {
     transform: translateX(100%);
@@ -151,16 +132,16 @@ body {
   background-color: #244f75; }
 
 .bloque:nth-child(2) {
-  background-color: #60BFBF; }
+  background-color: #60bfbf; }
 
 .bloque:nth-child(3) {
-  background-color: #8C4B7E; }
+  background-color: #8b4c7e; }
 
 .bloque:nth-child(4) {
-  background-color: #F8BB44; }
+  background-color: #f8bb44; }
 
 .bloque.bloque:nth-child(5) {
-  background-color: #F24B4B; }
+  background-color: #f24b4b; }
 
 .bloque::before {
   background-color: rgba(189, 204, 189, 0.2); }
@@ -170,16 +151,36 @@ body {
   margin: 0;
   padding: 0; }
 
+/* .container {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);//why is not working
+    grid-template-rows: auto;
+    height: 100vh;
+    gap: 3px;
+    overflow: hidden;
+} */
+.container-1 {
+  flex-basis: 20%; }
+
+.container-2 {
+  flex-basis: 20%; }
+
+.container-3 {
+  flex-basis: 20%; }
+
+.container-4 {
+  flex-basis: 20%; }
+
+.container-5 {
+  flex-basis: 20%; }
+
 .container {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: auto;
-  height: 100vh;
-  gap: 3px;
-  overflow: hidden; }
+  display: flex;
+  flex-flow: row nowrap; }
 
 .bloque {
-  display: inline-flex;
+  display: flex;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -220,7 +221,8 @@ body {
 
 h1 {
   text-transform: uppercase;
-  font-size: 350%; }
+  font-size: 350%;
+  text-rendering: geometricPrecision; }
 
 @media all and (max-width: 900px) {
   h1 {

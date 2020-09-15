@@ -1,29 +1,48 @@
+//we all have to jump into leaps of faith
+
+//bgc
+$myBgc: whitesmoke;
+
+//stripes
+$myStripes:  rgba(189, 204, 189, 0.2);
+
+//ready for the loop?
+$colorOne:#244f75;
+$colorTwo:#60bfbf;
+$colorThree:#8b4c7e;
+$colorFour:#f8bb44;
+$colorFive:#f24b4b;
+
+//or map instead
+
+
+
 body {
-    background-color: whitesmoke;
+    background-color: $myBgc;
 }
 
 .bloque:nth-child(1) {
 
-    background-color: #244f75;
+    background-color: $colorOne;
 }
 .bloque:nth-child(2) {
 
-    background-color: #60BFBF;
+    background-color: $colorTwo;
 }
 .bloque:nth-child(3) {
 
-    background-color: #8C4B7E;
+    background-color: $colorThree;
 }
 .bloque:nth-child(4) {
 
-    background-color: #F8BB44;
+    background-color:$colorFour;
 }
 .bloque.bloque:nth-child(5) {
 
-    background-color: #F24B4B;
+    background-color: $colorFive;
 }
 .bloque::before {
 
-    background-color: rgba(189, 204, 189, 0.2);
+    background-color:$myStripes;
 }
 

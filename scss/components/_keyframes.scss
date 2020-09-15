@@ -1,70 +1,101 @@
-.bloque:nth-child(1){
+//we don't like to repeat, do we fool?
+$bottomLine: bottom;
+
+//ease into it
+$swing: ease-out;
+
+//mixing
+@mixin childFirst {
     align-self: flex-end;
     animation-duration: 0.5s;
     animation-iteration-count: 1;
     transform-origin: left;
-
+    
 }
 
-.bloque:nth-child(2){
+@mixin childDuo {
+
     align-self: flex-end;
     animation-duration: 0.5s;
     animation-iteration-count: 1;
-    transform-origin: bottom;
-
+    transform-origin: $bottomLine;
+    
 }
 
-.bloque:nth-child(3){
+@mixin childMiddle {
+    
     align-self: flex-end;
     animation-duration: 0.5s;
     animation-iteration-count: 1;
     transform-origin: top;
-
 }
 
-.bloque:nth-child(4){
-    align-self: flex-end;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-    transform-origin: bottom;
-
-}
-.bloque:nth-child(5){
+@mixin childLast {
+    
     align-self: flex-end;
     animation-duration: 0.5s;
     animation-iteration-count: 1;
     transform-origin: right;
+}
+
+
+.bloque:nth-child(1){
+
+    @include childFirst;
+
+}
+
+.bloque:nth-child(2){
+
+    @include childDuo;
+
+}
+
+.bloque:nth-child(3){
+    
+    @include childMiddle;
+
+}
+
+.bloque:nth-child(4){
+    
+    @include childDuo;
+
+}
+.bloque:nth-child(5){
+    
+    @include childLast;
 
 }
 
 .bloque.sombra.blanca:nth-child(1) {
 
     animation-name: movBlockOne;
-    animation-timing-function: ease-out;
+    animation-timing-function: $swing;
 }
 
 .bloque.sombra.blanca:nth-child(2) {
 
     animation-name: movBlockTwo;
-    animation-timing-function: ease-out;
+    animation-timing-function: $swing;
 }
 
 .bloque.sombra.blanca:nth-child(3) {
 
     animation-name: movBlockThree;
-    animation-timing-function: ease-out;
+    animation-timing-function: $swing;
 }
 
 .bloque.sombra.blanca:nth-child(4) {
 
-    animation-name: movBlockFour;
-    animation-timing-function: ease-out;
+    animation-name: movBlockTwo;
+    animation-timing-function: $swing;
 }
 
 .bloque.sombra.blanca:nth-child(5) {
 
     animation-name: movBlockFive;
-    animation-timing-function: ease-out;
+    animation-timing-function: $swing;
 }
 
 
@@ -130,30 +161,6 @@
         -moz-transform: translateY(-10%) ;
         -ms-transform: translateY(-10%) ;
         -o-transform: translateY(-10%) ;
-}
-    100% {
-        transform: translateY(0);
-        -webkit-transform: translateY(0);
-        -moz-transform: translateY(0);
-        -ms-transform: translateY(0);
-        -o-transform: translateY(0);
-}
-}
-
-@keyframes movBlockFour {
-
-    0% { transform:translateY(100%); 
-        -webkit-transform:translateY(100%); 
-        -moz-transform:translateY(100%); 
-        -ms-transform:translateY(100%); 
-        -o-transform:translateY(100%);
-}
-    70% {
-        transform: translateY(10%) ;
-        -webkit-transform: translateY(10%) ;
-        -moz-transform: translateY(10%) ;
-        -ms-transform: translateY(10%) ;
-        -o-transform: translateY(10%) ;
 }
     100% {
         transform: translateY(0);

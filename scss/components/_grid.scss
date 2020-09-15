@@ -8,17 +8,37 @@ body {
 }
 
 //grid
-.container {
+/* .container {
     display: grid;
     grid-template-columns: repeat(5,1fr);//why is not working
     grid-template-rows: auto;
     height: 100vh;
     gap: 3px;
     overflow: hidden;
+} */
+
+//for loop for grid, let/s see
+//declaramos columnas
+$columns: 5;
+
+//for loop
+@for $i from 1 through $columns {
+    .container-#{$i} {
+        flex-basis: (100 / ($columns)) * 1% ;
+    }
 }
+//how do we see them, thanks Albert!!
+.container{
+    display: flex;
+    flex-flow: row nowrap;
+    
+}
+
+//revisar
  //flex all middle
 .bloque  {
-     display: inline-flex;
+     display: flex;
+     flex-flow: column nowrap;
      justify-content: center;
      align-items: center;
      position: relative;
