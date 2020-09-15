@@ -1,41 +1,46 @@
 //we don't like to repeat, do we fool?
-$bottomLine: bottom;
+$alignment: flex-end;
+$timeUp: 0.5s;
+$howManyTimes: 1;
+
+//map
+$myDirection: ("one":left, "two":bottom, "three":top, "four":right);
 
 //ease into it
 $swing: ease-out;
 
 //mixing
 @mixin childFirst {
-    align-self: flex-end;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-    transform-origin: left;
+    align-self: $alignment;
+    animation-duration: $timeUp;
+    animation-iteration-count: $howManyTimes;
+    transform-origin: map-get($map:$myDirection , $key:"one" );
     
 }
 
 @mixin childDuo {
 
-    align-self: flex-end;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-    transform-origin: $bottomLine;
+    align-self: $alignment;
+    animation-duration: $timeUp;
+    animation-iteration-count: $howManyTimes;
+    transform-origin: map-get($map: $myDirection, $key:"two" );
     
 }
 
 @mixin childMiddle {
     
-    align-self: flex-end;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-    transform-origin: top;
+    align-self: $alignment;
+    animation-duration: $timeUp;
+    animation-iteration-count: $howManyTimes;
+    transform-origin:  map-get($map:$myDirection , $key:"three" );
 }
 
 @mixin childLast {
     
-    align-self: flex-end;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-    transform-origin: right;
+    align-self: $alignment;
+    animation-duration: $timeUp;
+    animation-iteration-count: $howManyTimes;
+    transform-origin:  map-get($map:$myDirection , $key:"four" );
 }
 
 

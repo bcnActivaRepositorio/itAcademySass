@@ -215,7 +215,7 @@ body {
   -o-transform: scaleX(2); }
 
 * {
-  font-family: 'Lato', Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;
   color: white;
   text-rendering: geometricPrecision; }
 
