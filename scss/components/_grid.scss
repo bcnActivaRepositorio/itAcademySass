@@ -1,10 +1,18 @@
 //grid general
+@mixin ruleOfGold {
 
-// I am used to
-body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+html {
+
+    @include ruleOfGold;
+}
+
+*, *::before, *::after {
+
+    box-sizing: inherit;
 }
 
 //grid
