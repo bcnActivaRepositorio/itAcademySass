@@ -71,6 +71,37 @@ html {
   -ms-transform: scaleX(2);
   -o-transform: scaleX(2); }
 
+* {
+  font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+  text-rendering: geometricPrecision; }
+
+h1 {
+  text-transform: uppercase;
+  font-size: 350%;
+  text-rendering: geometricPrecision; }
+
+body {
+  background-color: whitesmoke; }
+
+.bloque:nth-child(1) {
+  background-color: #244f75; }
+
+.bloque:nth-child(2) {
+  background-color: #60bfbf; }
+
+.bloque:nth-child(3) {
+  background-color: #8b4c7e; }
+
+.bloque:nth-child(4) {
+  background-color: #f8bb44; }
+
+.bloque.bloque:nth-child(5) {
+  background-color: #f24b4b; }
+
+.bloque::before {
+  background-color: rgba(189, 204, 189, 0.2); }
+
 .bloque:nth-child(1) {
   align-self: flex-end;
   animation-duration: 0.5s;
@@ -197,37 +228,6 @@ html {
     -moz-transform: translateY(0);
     -ms-transform: translateY(0);
     -o-transform: translateY(0); } }
-body {
-  background-color: whitesmoke; }
-
-.bloque:nth-child(1) {
-  background-color: #244f75; }
-
-.bloque:nth-child(2) {
-  background-color: #60bfbf; }
-
-.bloque:nth-child(3) {
-  background-color: #8b4c7e; }
-
-.bloque:nth-child(4) {
-  background-color: #f8bb44; }
-
-.bloque.bloque:nth-child(5) {
-  background-color: #f24b4b; }
-
-.bloque::before {
-  background-color: rgba(189, 204, 189, 0.2); }
-
-* {
-  font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;
-  color: white;
-  text-rendering: geometricPrecision; }
-
-h1 {
-  text-transform: uppercase;
-  font-size: 350%;
-  text-rendering: geometricPrecision; }
-
 @media all and (max-width: 900px) {
   h1 {
     font-size: 275%; } }
